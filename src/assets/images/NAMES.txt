@@ -1,0 +1,10 @@
+SAVE YOUR PHOTOS IN THIS FOLDER WITH THESE NAMES
+(two digits, no gaps; .jpg .jpeg .png or .webp)
+
+hero-01, hero-02, hero-03 ...      home page slider (tall portrait photos)
+design-01, design-02, ...          gallery: Designs
+natural-01, natural-02, ...        gallery: Naturals
+owner                              About page portrait
+about-2                            About page, small second photo (optional)
+
+Tip: resize big phone photos to about 1600px wide so the site loads fast.

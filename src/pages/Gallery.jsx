@@ -31,9 +31,6 @@ export default function Gallery() {
               ) : (
                 <div className={`shot__img ph v${1 + (k % 4)}`} style={{ aspectRatio: `1 / ${it.h}` }} />
               )}
-              <figcaption>
-                <span>{it.label}</span>
-              </figcaption>
             </figure>
           ))}
         </div>

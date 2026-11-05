@@ -49,7 +49,6 @@ export default function Home() {
             {recent.map((it, k) => (
               <Link key={it.label} className="tile reveal" to="/gallery">
                 <div className={`pic${it.url ? '' : ` ph v${1 + (k % 4)}`}`} style={bg(it.url)} />
-                <span className="tile__tag">{it.label}</span>
               </Link>
             ))}
           </div>
@@ -69,7 +68,7 @@ export default function Home() {
             <div className="step reveal">
               <div className="step__n">1</div>
               <h3>Choose a piece</h3>
-              <p>Browse the gallery and note the name of the one you like, for example "Design 04".</p>
+              <p>Browse the gallery and tap the picture of the one you like.</p>
             </div>
             <div className="step reveal">
               <div className="step__n">2</div>

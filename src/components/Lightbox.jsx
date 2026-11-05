@@ -35,7 +35,6 @@ export default function Lightbox({ items, index, onClose, onChange }) {
         <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
       </button>
       {item.url && <img className="lb__img" src={item.url} alt={item.label} />}
-      <div className="lb__cap">{item.label}</div>
       <a className="btn btn--wa" href={waItem(item.label)} target="_blank" rel="noopener noreferrer">
         <WaIcon /> Enquire on WhatsApp
       </a>

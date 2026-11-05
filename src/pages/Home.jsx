@@ -11,7 +11,6 @@ export default function Home() {
   const ref = useReveal()
   const recent = galleryItems.slice(0, 6)
   const first = galleryItems[0]
-  const thumb = (cat) => galleryItems.find((x) => x.cat === cat && x.url)
 
   return (
     <div ref={ref}>
@@ -48,32 +47,12 @@ export default function Home() {
           </div>
           <div className="stagger">
             {recent.map((it, k) => (
-              <Link key={it.label} className="tile reveal" to={`/gallery#${it.cat}`}>
+              <Link key={it.label} className="tile reveal" to="/gallery">
                 <div className={`pic${it.url ? '' : ` ph v${1 + (k % 4)}`}`} style={bg(it.url)} />
                 <span className="tile__tag">{it.label}</span>
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CATEGORIES */}
-      <section className="container reveal">
-        <div className="cats">
-          {[
-            ['I', 'Designs', 'designs'],
-            ['II', 'Naturals', 'naturals'],
-          ].map(([n, title, cat]) => {
-            const t = thumb(cat)
-            return (
-              <Link key={cat} className="cat" to={`/gallery#${cat}`}>
-                <span className="cat__n">{n}</span>
-                <span className="cat__t">{title}</span>
-                <span className={`cat__thumb${t ? '' : ' ph'}`} style={bg(t && t.url)} />
-                <span className="cat__go">View</span>
-              </Link>
-            )
-          })}
         </div>
       </section>
 

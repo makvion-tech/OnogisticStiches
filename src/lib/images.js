@@ -28,27 +28,13 @@ export const aboutSecondImage = byName['about-2'] || null
 
 const pad = (n) => String(n).padStart(2, '0')
 const designs = series('design')
-const naturals = series('natural')
 
 function build() {
-  const items = []
-  const max = Math.max(designs.length, naturals.length)
-  for (let i = 0; i < max; i++) {
-    if (designs[i]) items.push({ url: designs[i], cat: 'designs', label: `Design ${pad(i + 1)}` })
-    if (naturals[i]) items.push({ url: naturals[i], cat: 'naturals', label: `Natural ${pad(i + 1)}` })
-  }
+  const items = designs.map((url, i) => ({ url, cat: 'designs', label: `Design ${pad(i + 1)}` }))
   if (!items.length) {
     // no photos yet: show gold placeholders so the layout is visible
     const heights = [1.25, 1.0, 1.4, 1.15, 1.3, 1.05, 1.35, 1.2, 1.1]
-    for (let i = 0; i < 9; i++) {
-      const natural = i % 2 === 1
-      items.push({
-        url: null,
-        cat: natural ? 'naturals' : 'designs',
-        label: `${natural ? 'Natural' : 'Design'} ${pad(Math.floor(i / 2) + 1)}`,
-        h: heights[i],
-      })
-    }
+    heights.forEach((h, i) => items.push({ url: null, cat: 'designs', label: `Design ${pad(i + 1)}`, h }))
   }
   return items
 }

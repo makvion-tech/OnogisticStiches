@@ -41,7 +41,7 @@ export default function Contact() {
             <div className="step reveal">
               <div className="step__n">1</div>
               <h3>Pick your piece</h3>
-              <p>Choose from the gallery, or describe something new. Send us the piece name, such as "Natural 02".</p>
+              <p>Choose from the gallery, or describe something new. Send us the piece name, such as "Design 02".</p>
             </div>
             <div className="step reveal">
               <div className="step__n">2</div>

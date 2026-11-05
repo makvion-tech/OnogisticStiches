@@ -46,11 +46,9 @@ export default function Hero() {
         </h1>
         <div className="hero__sub">
           <span>Designs</span>
-          <span>Naturals</span>
         </div>
         <div className="hero__ctas">
-          <Link className="btn btn--solid" to="/gallery#designs">Explore Designs</Link>
-          <Link className="btn btn--ghost" to="/gallery#naturals">Explore Naturals</Link>
+          <Link className="btn btn--solid" to="/gallery">Explore Designs</Link>
         </div>
       </div>
 

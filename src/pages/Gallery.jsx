@@ -17,13 +17,7 @@ export default function Gallery() {
       </div>
 
       <section className="container">
-        <div className="filters">
-          <span className="count" style={{ marginLeft: 0 }}>
-            {galleryItems.length} {galleryItems.length === 1 ? 'piece' : 'pieces'}
-          </span>
-        </div>
-
-        <div className="masonry">
+        <div className="masonry" style={{ marginTop: 24 }}>
           {galleryItems.map((it, k) => (
             <figure key={it.label} className="shot reveal" onClick={() => setOpen(k)}>
               {it.url ? (

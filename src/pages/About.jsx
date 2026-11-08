@@ -10,12 +10,11 @@ export default function About() {
     <div ref={ref}>
       <section className="section section--tight">
         <div className="container about">
-          {/* Owner portrait: save as src/assets/images/owner.jpg. Sewing photo: about-2.jpg */}
+          {/* Owner portrait: save as src/assets/images/owner.jpg */}
           <div className="portrait reveal">
             <div className="frame arch">
               <div className={`pic${ownerImage ? '' : ' ph'}`} style={bg(ownerImage)} />
             </div>
-            {aboutSecondImage && <div className="portrait__small has" style={bg(aboutSecondImage)} />}
           </div>
 
           <div className="reveal">
@@ -34,6 +33,25 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* Sewing photo: save as src/assets/images/about-2.jpg (section shows once the photo exists) */}
+      {aboutSecondImage && (
+        <section className="section studio">
+          <div className="container studio__grid">
+            <div className="reveal">
+              <span className="eyebrow">In the Studio</span>
+              <h2>Where every piece <em>takes shape</em></h2>
+              <p>
+                Every stitch is placed with care, from the first cut of fabric to the final press. This is where your
+                idea becomes something you can wear.
+              </p>
+            </div>
+            <div className="studio__photo frame reveal">
+              <div className="pic" style={bg(aboutSecondImage)} />
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="container reveal">
         <div className="values">

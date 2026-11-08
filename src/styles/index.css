@@ -273,10 +273,12 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--gold-de
 .head-row--center { justify-content: center; text-align: center; }
 .section--flush { padding-top: 0; }
 .section--tight { padding-top: clamp(48px, 7vw, 90px); }
-/* About: sewing photo */
-.portrait { margin-bottom: 44px; }
-.portrait__small { width: 64%; aspect-ratio: 4 / 3; border-radius: 0; right: -44px; bottom: -44px; }
+/* About: studio section */
+.studio__grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 90px); align-items: center; }
+.studio h2 { font-size: clamp(30px, 4vw, 50px); margin: 14px 0 18px; }
+.studio p { color: var(--muted); font-size: 18px; max-width: 440px; margin: 0; }
+.studio__photo { aspect-ratio: 4 / 3; }
 @media (max-width: 900px) {
-  .portrait { margin-bottom: 36px; }
-  .portrait__small { width: 62%; right: -8px; bottom: -28px; }
+  .studio__grid { grid-template-columns: 1fr; }
+  .studio__photo { order: -1; }
 }

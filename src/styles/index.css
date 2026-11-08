@@ -273,3 +273,10 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--gold-de
 .head-row--center { justify-content: center; text-align: center; }
 .section--flush { padding-top: 0; }
 .section--tight { padding-top: clamp(48px, 7vw, 90px); }
+/* About: sewing photo */
+.portrait { margin-bottom: 44px; }
+.portrait__small { width: 64%; aspect-ratio: 4 / 3; border-radius: 0; right: -44px; bottom: -44px; }
+@media (max-width: 900px) {
+  .portrait { margin-bottom: 36px; }
+  .portrait__small { width: 62%; right: -8px; bottom: -28px; }
+}

@@ -10,7 +10,7 @@ export default function About() {
     <div ref={ref}>
       <section className="section section--tight">
         <div className="container about">
-          {/* Owner portrait: save as src/assets/images/owner.jpg (optional second: about-2.jpg) */}
+          {/* Owner portrait: save as src/assets/images/owner.jpg. Sewing photo: about-2.jpg */}
           <div className="portrait reveal">
             <div className="frame arch">
               <div className={`pic${ownerImage ? '' : ' ph'}`} style={bg(ownerImage)} />
@@ -22,7 +22,7 @@ export default function About() {
             <span className="eyebrow">Meet the Maker</span>
             <h1>The hands behind <em>the thread</em></h1>
             <p>
-              Welcome to Onogistic Stiches. Every piece we make begins with a simple belief: clothes should fit your
+              Welcome to Onogistic Stitches. Every piece we make begins with a simple belief: clothes should fit your
               body, suit your story and make you feel like the best version of yourself.
             </p>
             <p>
